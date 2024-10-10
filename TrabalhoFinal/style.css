@@ -1,0 +1,101 @@
+body {
+    background-color: #F8F9FA; /* Cinza Claro */
+    color: #343A40; /* Cinza Escuro */
+}
+
+.button {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #FFC107;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #FFC107;
+}
+  
+.button:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #ffffff;
+    box-shadow: 4px 5px 17px -4px #FFC107;
+}
+  
+.button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #FFC107;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+  
+.button:hover::before {
+    width: 250%;
+}
+  
+.hero {
+    background: linear-gradient(to bottom, #FFC107, #F8F9FA); /* Amarelo Escuro e Cinza Claro */
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #343A40; /* Cinza Escuro */
+}
+
+h4 {
+    margin-top: 20px;
+}
+
+.navbar-nav .nav-link {
+    color: #343A40; /* Cinza Escuro */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FFC107; /* Amarelo Escuro */
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s; /* Animação suave */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de elevação */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+footer {
+    background-color: #FFC107; /* Cinza Escuro */
+    text-align: center;
+    padding: 10px 0;
+    color:#343A40; /* Cinza Claro */
+}
+
+/* Animação para os cards */
+.animated {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards; /* Animação de entrada */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.img-fluid {
+    margin-top: 20px; /* Espaçamento para as imagens */
+}
